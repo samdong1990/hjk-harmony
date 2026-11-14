@@ -69,7 +69,9 @@ hvigorw.bat assembleHap --mode project -p product=default -p buildMode=debug --n
 
 签名必须先在 DevEco 里配好（命令行不生成签名材料），否则只会出未签名包，装不上真机。
 
-> 本工程 `build-profile.json5` 里 `signingConfigs` 是空的，**没有内置任何证书**，签名材料需要你自己生成。
+> 仓库里的 `build-profile.json5` 中 `signingConfigs` 是空的 —— 签名材料（`.p12` / `.p7b` / `.cer`）和口令
+> **不入库**，clone 之后由 DevEco 在 `Project Structure → Signing Configs` 里自动生成。
+> DevEco 自动写回本机的签名配置属于本地改动，不要提交。
 
 ---
 
