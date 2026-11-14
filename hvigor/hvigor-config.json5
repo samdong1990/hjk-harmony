@@ -1,0 +1,16 @@
+{
+  "modelVersion": "6.1.0",
+  "dependencies": {
+  },
+  "execution": {
+    "daemon": false,
+    "parallel": false
+  },
+  "logging": {
+  },
+  "debugging": {
+  },
+  "nodeOptions": {
+    "maxOldSpaceSize": 2048
+  }
+}
