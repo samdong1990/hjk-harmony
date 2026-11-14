@@ -243,9 +243,9 @@ struct Index {
           .onHttpErrorReceive((event: OnHttpErrorReceiveEvent): void => {
             const resp: WebResourceResponse = event.response;
             hilog.warn(DOMAIN, TAG, 'http error %{public}d %{public}s',
-              resp.getResponseCode(), resp.getReason());
+              resp.getResponseCode(), resp.getReasonMessage());
           })
-          .onDownloadStart((event: DownloadStartEvent): void => {
+          .onDownloadStart((event: OnDownloadStartEvent): void => {
             // H5 里带 download 属性的链接（对应原版 DownloadManager）统一交给系统浏览器，
             // 浏览器会自己下到「下载」目录，用户能直接在文件管理里找到。
             if (event.url.length > 0) {
